@@ -3,7 +3,7 @@ import { getAPIKey } from "../api/auth.js";
 
 describe("getAPIKey", () => {
   test("returns the API key from a valid ApiKey authorization header", () => {
-    expect(getAPIKey({ authorization: "ApiKey secret-123" })).toBe("wrong-key");
+    expect(getAPIKey({ authorization: "ApiKey secret-123" })).toBe("secret-123");
   });
 
   test("returns null when the authorization header is missing", () => {
